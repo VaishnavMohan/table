@@ -1,0 +1,119 @@
+/* Base table styles */
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.responsive-table th,
+.responsive-table td {
+  padding: 8px;
+  text-align: center;
+}
+
+.responsive-table th {
+  background-color: #f2f2f2;
+}
+
+/* Responsive styles */
+.table-container {
+  overflow-x: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .responsive-table {
+      overflow-x: scroll;
+      display: block;
+  }
+
+  .responsive-table thead,
+  .responsive-table tbody,
+  .responsive-table th,
+  .responsive-table td,
+  .responsive-table tr {
+      display: block;
+  }
+
+  .responsive-table thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+  }
+
+  .responsive-table tr {
+      border-bottom: 1px solid #ccc;
+  }
+
+  .responsive-table td {
+      border: none;
+      position: relative;
+      padding-left: 50%;
+      text-align: left;
+  }
+
+  .responsive-table td:before {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      font-weight: bold;
+  }
+
+  .responsive-table td:nth-of-type(1):before { content: "Indicator"; }
+  .responsive-table td:nth-of-type(2):before { content: "Header 1"; }
+  .responsive-table td:nth-of-type(3):before { content: "Header 2"; }
+  .responsive-table td:nth-of-type(4):before { content: "Header 3"; }
+  .responsive-table td:nth-of-type(5):before { content: "Header 4"; }
+  .responsive-table td:nth-of-type(6):before { content: "Header 5"; }
+  .responsive-table td:nth-of-type(7):before { content: "Header 6"; }
+  .responsive-table td:nth-of-type(8):before { content: "Header 7"; }
+  .responsive-table td:nth-of-type(9):before { content: "Header 8"; }
+}
+
+/* Indicator styles */
+.indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 24px;
+}
+
+.icon {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.offline .icon {
+  background-color: green;
+}
+
+.normal .icon {
+  background-color: blue;
+}
+
+.caption {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Indicator hover styles */
+.indicator:hover .caption {
+  opacity: 1;
+}
+
+/* Row hover styles */
+.responsive-table tbody tr:hover td:not(:first-child) {
+  font-weight: bold;
+}
