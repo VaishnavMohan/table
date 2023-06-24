@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
     <title>Responsive Table</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <body>
     <div class="table-container">
         <table class="responsive-table">
@@ -17,15 +19,15 @@
                     <th>Header 5</th>
                     <th>Header 6</th>
                     <th>Header 7</th>
-                    <th>Header 8</th>
+                    <th>Message</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>
-                        <div class="indicator">
-                            <span class="icon offline"></span>
-                            <span class="caption">Offline</span>
+                        <div class="indicator-container">
+                            <span class="indicator offline" title="Offline"></span>
+                            <span class="indicator-caption">Offline</span>
                         </div>
                     </td>
                     <td>Data 1</td>
@@ -35,13 +37,20 @@
                     <td>Data 5</td>
                     <td>Data 6</td>
                     <td>Data 7</td>
-                    <td>Data 8</td>
+                    <td class="stop-icon-cell">
+                        <div class="stop-icon" title="Stop">
+                          <i class="fas fa-ban"></i>
+                        </div>
+                        <div class="clock-icon" title="Clock">
+                            <i class="fas fa-clock"></i>
+                          </div>
+                      </td>
                 </tr>
                 <tr>
                     <td>
-                        <div class="indicator">
-                            <span class="icon normal"></span>
-                            <span class="caption">Normal</span>
+                        <div class="indicator-container">
+                            <span class="indicator offline" title="Offline"></span>
+                            <span class="indicator-caption">Offline</span>
                         </div>
                     </td>
                     <td>Data 1</td>
@@ -51,9 +60,62 @@
                     <td>Data 5</td>
                     <td>Data 6</td>
                     <td>Data 7</td>
-                    <td>Data 8</td>
+                     <td class="stop-icon-cell">
+                        <div class="stop-icon" title="Stop">
+                          <i class="fas fa-ban"></i>
+                        </div>
+                        <div class="clock-icon" title="Clock">
+                            <i class="fas fa-clock"></i>
+                          </div>
+                      </td>
                 </tr>
-                <!-- Repeat the above row to create a total of 10 rows -->
+                <tr>
+                    <td>
+                        <div class="indicator-container">
+                            <span class="indicator offline" title="Offline"></span>
+                            <span class="indicator-caption">Offline</span>
+                        </div>
+                    </td>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                    <td>Data 3</td>
+                    <td>Data 4</td>
+                    <td>Data 5</td>
+                    <td>Data 6</td>
+                    <td>Data 7</td>
+                     <td class="stop-icon-cell">
+                        <div class="stop-icon" title="Stop">
+                          <i class="fas fa-ban"></i>
+                        </div>
+                        <div class="clock-icon" title="Clock">
+                            <i class="fas fa-clock"></i>
+                          </div>
+                      </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="indicator-container">
+                            <span class="indicator normal" title="Normal"></span>
+                            <span class="indicator-caption">Normal</span>
+                        </div>
+                    </td>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                    <td>Data 3</td>
+                    <td>Data 4</td>
+                    <td>Data 5</td>
+                    <td>Data 6</td>
+                    <td>Data 7</td>
+                     <td class="stop-icon-cell">
+                        <div class="stop-icon" title="Stop">
+                          <i class="fas fa-ban"></i>
+                        </div>
+                        <div class="clock-icon" title="Clock">
+                            <i class="fas fa-clock"></i>
+                          </div>
+                      </td>
+                </tr>
+                <!-- Repeat the above rows to create a total of 10 rows -->
             </tbody>
         </table>
     </div>
